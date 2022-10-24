@@ -1,0 +1,27 @@
+{
+  "name": "sierant.me",
+  "version": "1.0.0",
+  "homepage": "sierant.me",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "gh-pages": "^4.0.0",
+    "sass": "^1.55.0",
+    "vue": "^3.2.41"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.1.2",
+    "eslint": "^8.26.0",
+    "eslint-plugin-vue": "^9.6.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "2.7.1",
+    "vite": "^3.1.8"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
+}
