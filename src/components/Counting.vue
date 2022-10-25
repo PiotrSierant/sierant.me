@@ -21,7 +21,6 @@ export default {
 </script>
 
 <template>
-    <h1>sierant.me</h1>
     <h3>Counting</h3>
     <div>
         <h3 class="count">{{ count }}</h3>
