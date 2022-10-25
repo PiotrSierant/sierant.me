@@ -1,19 +1,25 @@
 <template>
-  <button @click="toggleButton">
-    <span v-if="showBooks">Hide Books</span>
-    <span v-else>Show Books</span>
-  </button>
-  <div class="books" v-if="showBooks">
-    <ul>
-      <li v-for="book in filteredList" :class="{ fav: book.isFav }" @click="toggleIsFav(book)">
-        <img :src="book.img" :alt="book.title" />
-        <section>
-          <h3>{{ book.title }}</h3>
-          <p>{{ book.author }}</p>
-        </section>
-      </li>
-    </ul>
-  </div>
+  <section class="list_section">
+    <div class="container">
+      <button @click="toggleButton" class="list__button" v-if="filteredList.length !== 0">
+        <span v-if="showBooks">Hide Books</span>
+        <span v-else>Show Books</span>
+      </button>
+    </div>
+      <div class="books" v-if="showBooks">
+        <ul>
+          <li v-for="book in filteredList" :class="{ fav: book.isFav }" @click="toggleIsFav(book)">
+            <div class="container">
+              <img :src="book.img" :alt="book.title" />
+              <section>
+                <h3>{{ book.title }}</h3>
+                <p>{{ book.author }}</p>
+              </section>
+            </div>
+          </li>
+        </ul>
+      </div>
+  </section>
 </template>
 
 <script>
@@ -24,8 +30,8 @@ export default {
       showBooks: true,
       books: [
         {title: 'Harry Potter', author: 'J.K. Rowling', isFav: true, img: 'src/assets/image/9788372781680.jpg'},
-        {title: 'Czysta architektura', author: 'Robert C. Martin', isFav: true, img: 'src/assets/image/algbvv.jpg'},
-        {title: 'Algorytmy bez tajemnic', author: 'Cormen', isFav: true, img: 'src/assets/image/CZYSTA-ARCHITEKTURA-STRUKTURA-DESIGN-OPROGRAMOWANI.jpg'}
+        {title: 'Czysta architektura', author: 'Robert C. Martin', isFav: true, img: 'src/assets/image/CZYSTA-ARCHITEKTURA-STRUKTURA-DESIGN-OPROGRAMOWANI.jpg'},
+        {title: 'Algorytmy bez tajemnic', author: 'Cormen', isFav: true, img: 'src/assets/image/algbvv.jpg'}
       ]
     }
   },
@@ -46,8 +52,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .books {
-    margin-bottom: 4rem;
+  .list_section {
+    width: 100%;
+    background-color: whitesmoke;
+
+  }
+  .list__button {
+    padding: 1rem 2rem;
+    border: 1px solid #42b883;
+    background-color: #35495e;
+    color: whitesmoke;
+    cursor: pointer;
+    margin: 1rem 0;
   }
   ul {
     padding: 0;
@@ -59,15 +75,23 @@ export default {
     list-style: none;
     width: 100%;
     border-bottom: 1px solid #222222;
-    background-color: whitesmoke;
     display: flex;
     gap: 2rem;
+    justify-content: flex-start;
+    align-items: center;
     img {
       max-height: 100px;
     }
   }
+  .container {
+    max-width: 1024px;
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    margin: 0 auto;
+  }
   .fav {
-    background-color: #8a8a8a;
+    background-color: #42b883;
   }
   h3 {
     font-size: 30px;

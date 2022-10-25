@@ -1,5 +1,5 @@
 <template>
-  <h1>sierant.<span>me</span></h1>
+  <h1>vue<span>js</span></h1>
 </template>
 
 <script>
@@ -10,9 +10,12 @@ export default {
 
 <style lang="scss" scoped>
   h1 {
+    padding: 1rem;
     font-size: 40px;
+    color: #42b883;
+    background-color: #2c3e50;
     span {
-      color: cornflowerblue;
+      color: whitesmoke;
     }
   }
 </style>

@@ -20,15 +20,18 @@ export default {
 </script>
 
 <template>
+  <section class="events__section">
     <h3>Events</h3>
     <div class="box__container">
-        <div class="box" @mouseover="handleEvent">mouseover</div>
-        <div class="box" @mouseleave="handleEvent">mouseleave</div>
-        <div class="box" @dblclick="handleEvent">double click</div>
-        <div class="box" @mousemove="handleMouseMove">
-            <p>Position: ({{ x }}, {{ y }})</p>
-        </div>
+      <div class="box" @mouseover="handleEvent">mouseover</div>
+      <div class="box" @mouseleave="handleEvent">mouseleave</div>
+      <div class="box" @dblclick="handleEvent">double click</div>
+      <div class="box" @mousemove="handleMouseMove">
+        <p>Position: ({{ x }}, {{ y }})</p>
+      </div>
     </div>
+  </section>
+
 </template>
 
 <style lang="scss" scoped>
@@ -37,7 +40,18 @@ export default {
     flex-direction: row;
     flex-wrap: wrap;
 }
-
+h3 {
+  padding: 1rem;
+  font-size: 40px;
+}
+.events__section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
 .box {
     padding: 100px 0;
     width: 300px;
