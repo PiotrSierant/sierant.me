@@ -6,6 +6,7 @@ import List from './components/List.vue';
 import Reactive from "./components/Reactive.vue";
 import Watch from './components/Watch.vue';
 import DynamicClass from './components/DynamicClass.vue';
+import People from './components/PeopleList/People.vue';
 export default {
     components: {
         Header,
@@ -15,6 +16,7 @@ export default {
         Reactive,
         Watch,
         DynamicClass,
+        People,
     }
 }
 </script>
@@ -27,4 +29,5 @@ export default {
     <Reactive />
     <Watch />
     <DynamicClass />
+    <People />
 </template>
