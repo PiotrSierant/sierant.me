@@ -1,12 +1,10 @@
 <template>
   <section class="computedProperties_section">
     <button @click="makeOrder" class="computedProperties__button">Check func</button>
-    <section class="computedProperties__details">
       <h3>Price: {{ price }}</h3>
       <h4>Quantity: {{ quantity }}</h4>
       <h4>Total price: {{ totalPrice }}</h4>
       <h4>Tax: {{ tax }}</h4>
-    </section>
   </section>
 </template>
 
@@ -32,25 +30,14 @@ export default {
 
 <style scoped>
 .computedProperties_section {
-  width: 100%;
-  background-color: #42b883;
-  color: whitesmoke;
+  box-shadow: 1px 1px 5px rgba(0,0,0, .5);
   padding: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 .computedProperties__button {
   padding: 1rem 2rem;
   border: 1px solid #35495e;
   background-color: #42b883;
   color: whitesmoke;
-  margin: 1rem 0 1rem 1rem;
   cursor: pointer;
-}
-.computedProperties__details {
-  display: flex;
-  flex-direction: column;
 }
 </style>
