@@ -7,12 +7,12 @@ import Reactive from "./components/Reactive.vue";
 import Watch from './components/Watch.vue';
 export default {
     components: {
-      Watch,
         Header,
         Counting,
         Events,
         List,
         Reactive,
+        Watch,
     }
 }
 </script>

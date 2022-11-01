@@ -55,5 +55,6 @@ h3 {
 }
 .button__section {
     display: flex;
+  flex-wrap: wrap;
 }
 </style>

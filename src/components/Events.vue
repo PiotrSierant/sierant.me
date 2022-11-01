@@ -39,6 +39,8 @@ export default {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 h3 {
   padding: 1rem;
@@ -54,7 +56,7 @@ h3 {
 }
 .box {
     padding: 100px 0;
-    width: 300px;
+    min-width: 250px;
     text-align: center;
     background-color: #ddd;
     margin: 20px;

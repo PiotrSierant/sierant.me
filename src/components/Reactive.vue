@@ -1,12 +1,15 @@
 <template>
   <section class="section_reactiveAndComputed">
-    <ComputedProperties />
-    <section class="reactive_section">
-      <button @click="makeOrder" class="reactive__button">Check func</button>
-        <h3>Price: {{ price }}</h3>
-        <h4>Quantity: {{ quantity }}</h4>
-        <h4>Total price: {{ totalPrice }}</h4>
-        <h4>Tax: {{ tax }}</h4>
+    <h3>ComputedProperties and reactive</h3>
+    <section class="boxes">
+      <ComputedProperties />
+      <section class="reactive_section">
+        <button @click="makeOrder" class="reactive__button">Check func</button>
+          <h3>Price: {{ price }}</h3>
+          <h4>Quantity: {{ quantity }}</h4>
+          <h4>Total price: {{ totalPrice }}</h4>
+          <h4>Tax: {{ tax }}</h4>
+      </section>
     </section>
   </section>
 </template>
@@ -42,8 +45,17 @@ export default {
   background-color: #2c3e50;
   color: whitesmoke;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
   padding: 2rem 0;
+  text-align: center;
+}
+.boxes {
+  display: flex;
+  justify-content: space-evenly;
+  flex-basis: 200px;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 .reactive_section {
   box-shadow: 1px 1px 5px rgba(0,0,0, .5);
