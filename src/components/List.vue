@@ -5,7 +5,7 @@
         <span v-if="showBooks">Hide Books</span>
         <span v-else>Show Books</span>
       </button>
-      <button @click="resetBooks(books)" class="list__button">Reset books</button>
+      <button @click="resetBooks(books)" class="list__button" :disabled="!books">Reset books</button>
     </div>
       <div class="books" v-if="showBooks">
         <ul>
