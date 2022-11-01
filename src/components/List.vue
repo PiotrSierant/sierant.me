@@ -5,6 +5,7 @@
         <span v-if="showBooks">Hide Books</span>
         <span v-else>Show Books</span>
       </button>
+      <button @click="resetBooks(books)" class="list__button">Reset books</button>
     </div>
       <div class="books" v-if="showBooks">
         <ul>
@@ -41,6 +42,11 @@ export default {
     },
     toggleIsFav(book) {
       book.isFav = !book.isFav
+    },
+    resetBooks(books) {
+      for(let book of books) {
+        book.isFav = true;
+      }
     }
   },
   computed: {
