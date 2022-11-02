@@ -4,7 +4,7 @@ export default {
     data() {
         return {
             x: 0,
-            y: 0
+            y: 0,
         }
     },
     methods: {
@@ -14,7 +14,7 @@ export default {
         handleMouseMove(e) {
             this.x = e.offsetX;
             this.y = e.offsetY;
-        }
+        },
     },
 }
 </script>
