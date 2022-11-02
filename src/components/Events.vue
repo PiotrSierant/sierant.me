@@ -30,6 +30,7 @@ export default {
         <p>Position: ({{ x }}, {{ y }})</p>
       </div>
     </div>
+    <!-- <div class="box" @mousemove.stop="handleEvent"></div> modyfikator vue,  -->
   </section>
 
 </template>
