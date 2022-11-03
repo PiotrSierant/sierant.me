@@ -7,9 +7,11 @@ import Reactive from "./components/Reactive.vue";
 import Watch from './components/Watch.vue';
 import DynamicClass from './components/DynamicClass.vue';
 import People from './components/PeopleList/People.vue';
+import ModalComponent from './components/Modal/ModalComponent.vue'
 export default {
     components: {
         Header,
+        ModalComponent,
         Counting,
         Events,
         List,
@@ -23,6 +25,7 @@ export default {
 
 <template>
     <Header />
+    <ModalComponent />
     <Counting />
     <Events />
     <List />
